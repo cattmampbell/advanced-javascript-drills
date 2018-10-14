@@ -1,12 +1,8 @@
-// console.log(`Testing... Testing... 1, 2, 3...`);
-
 name = 'Matthew';
 var name;
-// let name;
 console.log(name); // Should log: Matthew
 
 setName(); // Calls setName() b/f it is declared!
-
 function setName() {
     var name = 'Covalence';
     console.log(name); // Should log: Covalence
@@ -44,9 +40,12 @@ function myName() {
     console.log(`My name is: ${name}`);
 }
 
+let alertThisMessage = function(message) {
+    alert(message);
+}
+alertThisMessage(`Hello World!`); // Should alert: Hello World!
+
 /*
-* CONSOLE SHOULD LOG (IN ORDER):
-*
 * Matthew
 * Covalence
 * Before findAverage() is called.
