@@ -21,6 +21,29 @@ function findAverage(number1, number2) {
     return answer;
 }
 
+let fruits = [`Mango`, `Banana`, `Apple`];
+let favoriteFruit; // Global Scope
+let leastFavoriteFruit; // Global Scope
+
+function printFruit(index) {
+    console.log(`Print my first fruit: ${fruits[index]}`); 
+    let favoriteFruit = fruits[1];
+    let leastFavoriteFruit = fruits[2]; 
+
+    function printMyFavoriteFruit() {
+        console.log(`Print my favorite fruit: ${favoriteFruit}`); 
+    }
+    printMyFavoriteFruit(); // Should log: Banana
+}
+
+console.log(`Print my least-favorite fruit: ${leastFavoriteFruit}`); // Should log: undefined
+printFruit(0); // Should log: Mango
+
+myName();
+function myName() {
+    console.log(`My name is: ${name}`);
+}
+
 /*
 * CONSOLE SHOULD LOG (IN ORDER):
 *
@@ -29,6 +52,10 @@ function findAverage(number1, number2) {
 * Before findAverage() is called.
 * Inside of findAverage().
 * After findAverage() was called. myAverage() is 84!
+* Print my least-favorite fruit: undefined
+* Print my first fruit: Mango
+* Print my favorite fruit: Banana
+* My name is: Matthew 
 * End of script.
 */ 
 
